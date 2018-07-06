@@ -6,7 +6,7 @@ void Start()
 	//Universal WndProc Hook with SetWindowLongPtr
 	// using Hook::KeyListener[VKkey] to get the corresponding keypress
 	// a replacement of GetAKeySyncState.
-	Hook::oriWndProc = SetWindowLongPtr(0, GWLP_WNDPROC, (LONG_PTR)Hook::WndProc);
+	Hook::oriWndProc = SetWindowLongPtr(FindWindow(NULL, "Your Window"), GWLP_WNDPROC, (LONG_PTR)Hook::WndProc);
 }
 
 
